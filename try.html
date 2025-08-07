@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup Form</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(95, 227, 163);
+      color: rgb(42, 165, 50);
+    }
+
+    form {
+      padding: 40px;
+      background: rgb(31, 177, 172);
+      border: 3px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="signup-form">
+    <h1 style="color:rgb(231, 26, 26); text-align: center;">Signup Here</h1>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="myInput" required><br><br>
+
+    <input type="checkbox" onclick="togglePassword()">Show Password<br><br>
+
+    <label for="photo" style="color: brown;">Photo (min 10kb to 50mb):</label><br>
+    <input type="file" name="photo" id="photo"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    // Toggle show/hide password
+    function togglePassword() {
+      var x = document.getElementById("myInput");
+      x.type = x.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("signup-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent actual form submission
+      window.location.href = "net.html";
+  </script>
+
+</body>
+</html>
